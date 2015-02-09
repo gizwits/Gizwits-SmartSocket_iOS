@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="KGk-i7-Jjw" customClass="IoTTimingSubscribeCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="重复" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BAk-wh-chb">
+                        <rect key="frame" x="15" y="10" width="34" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="21" id="3QB-LI-rB1"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ZTa-WR-ix4" customClass="MultiSelectSegmentedControl">
+                        <rect key="frame" x="15" y="41" width="290" height="29"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="28" id="SIi-lg-5Mx"/>
+                        </constraints>
+                        <segments>
+                            <segment title="一"/>
+                            <segment title="二"/>
+                            <segment title="三"/>
+                            <segment title="四"/>
+                            <segment title="五"/>
+                            <segment title="六"/>
+                            <segment title="日"/>
+                        </segments>
+                        <connections>
+                            <action selector="onSelectedIndex:" destination="KGk-i7-Jjw" eventType="valueChanged" id="XRP-f3-VZP"/>
+                        </connections>
+                    </segmentedControl>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="ZTa-WR-ix4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="7" id="0kg-xm-JsJ"/>
+                    <constraint firstItem="ZTa-WR-ix4" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" constant="-7" id="7HD-Nx-A2s"/>
+                    <constraint firstItem="BAk-wh-chb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="2" id="tK9-vr-Saz"/>
+                    <constraint firstItem="BAk-wh-chb" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="7" id="tjB-q0-EaO"/>
+                    <constraint firstItem="ZTa-WR-ix4" firstAttribute="top" secondItem="BAk-wh-chb" secondAttribute="bottom" constant="10" id="vYY-6S-EEk"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="multiSegment" destination="ZTa-WR-ix4" id="RxR-nh-pRV"/>
+            </connections>
+            <point key="canvasLocation" x="244" y="245"/>
+        </tableViewCell>
+    </objects>
+</document>

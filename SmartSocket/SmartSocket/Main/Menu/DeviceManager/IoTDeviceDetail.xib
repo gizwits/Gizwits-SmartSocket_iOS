@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="IoTDeviceDetail">
+            <connections>
+                <outlet property="imageIcon" destination="2LP-uS-XUq" id="xzh-aQ-3mV"/>
+                <outlet property="textHWInfo" destination="Fkv-f4-ueZ" id="gqf-tb-ajS"/>
+                <outlet property="textProductName" destination="l18-Ti-gzc" id="4ay-A9-hOt"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewWhite" destination="Hdg-JY-ins" id="X7N-Yd-fqH"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hdg-JY-ins">
+                    <rect key="frame" x="240" y="50" width="120" height="120"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2LP-uS-XUq">
+                            <rect key="frame" x="18" y="18" width="84" height="84"/>
+                            <state key="normal" backgroundImage="head_icon2.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onChangeIcon:" destination="-1" eventType="touchUpInside" id="tLz-Jf-wxc"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="120" id="de8-oK-Wwd"/>
+                        <constraint firstAttribute="height" constant="120" id="ocS-Q1-DTa"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vwq-zr-vdI">
+                    <rect key="frame" x="183" y="222" width="234" height="43"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CKv-Vr-9SS">
+                            <rect key="frame" x="0.0" y="0.0" width="234" height="43"/>
+                            <state key="normal" backgroundImage="input_box.png">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="onRename:" destination="-1" eventType="touchUpInside" id="dDy-pY-P9j"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="名称" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XpN-bY-eVl">
+                            <rect key="frame" x="10" y="11" width="42" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="电视插座" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l18-Ti-gzc">
+                            <rect key="frame" x="77" y="11" width="146" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.08235294118" green="0.43137254899999999" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="234" id="4f2-ER-Yc4"/>
+                        <constraint firstAttribute="height" constant="43" id="Bwi-jQ-Rzg"/>
+                    </constraints>
+                </view>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fkv-f4-ueZ">
+                    <rect key="frame" x="20" y="301" width="560" height="206"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="55J-0C-gPE">
+                    <rect key="frame" x="239" y="542" width="122" height="36"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="122" id="Qyx-Pe-z6o"/>
+                        <constraint firstAttribute="height" constant="36" id="aRA-u4-eoE"/>
+                    </constraints>
+                    <inset key="contentEdgeInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="9"/>
+                    <state key="normal" title="删除" backgroundImage="button_delete.png">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="onDelete:" destination="-1" eventType="touchUpInside" id="LBe-oh-AY4"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.88627450980392153" green="0.88627450980392153" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="55J-0C-gPE" secondAttribute="bottom" constant="22" id="5St-6B-ZXj"/>
+                <constraint firstAttribute="trailing" secondItem="Fkv-f4-ueZ" secondAttribute="trailing" constant="20" id="7uP-jd-bjL"/>
+                <constraint firstItem="Vwq-zr-vdI" firstAttribute="top" secondItem="Hdg-JY-ins" secondAttribute="bottom" constant="52" id="Fda-Yl-Nx4"/>
+                <constraint firstAttribute="centerX" secondItem="Hdg-JY-ins" secondAttribute="centerX" id="FtA-K5-tEd"/>
+                <constraint firstItem="Fkv-f4-ueZ" firstAttribute="top" secondItem="Vwq-zr-vdI" secondAttribute="bottom" constant="36" id="HeJ-n6-yIn"/>
+                <constraint firstItem="55J-0C-gPE" firstAttribute="top" secondItem="Fkv-f4-ueZ" secondAttribute="bottom" constant="35" id="IBN-c0-LUt"/>
+                <constraint firstItem="Hdg-JY-ins" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="50" id="PPZ-vc-taU"/>
+                <constraint firstAttribute="centerX" secondItem="55J-0C-gPE" secondAttribute="centerX" id="QRI-8k-mBH"/>
+                <constraint firstItem="Fkv-f4-ueZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="i6g-no-Bk0"/>
+                <constraint firstAttribute="centerX" secondItem="Vwq-zr-vdI" secondAttribute="centerX" id="zad-ya-OYD"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="button_delete.png" width="191" height="57"/>
+        <image name="head_icon2.png" width="84" height="84"/>
+        <image name="input_box.png" width="234" height="43"/>
+    </resources>
+</document>
