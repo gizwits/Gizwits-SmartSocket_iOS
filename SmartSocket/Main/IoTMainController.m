@@ -557,10 +557,10 @@
     [self onDisconnected];
 }
 
-- (BOOL)XPGWifiDevice:(XPGWifiDevice *)device didReceiveData:(NSDictionary *)data result:(int)result
+- (void)XPGWifiDevice:(XPGWifiDevice *)device didReceiveData:(NSDictionary *)data result:(int)result
 {
     if(![device.did isEqualToString:self.device.did])
-        return YES;
+        return;
     
     [IoTAppDelegate.hud hide:YES];
     
@@ -613,7 +613,7 @@
         self.reloading = NO;
     }
     
-    return YES;
+    return;
 }
 
 @end
