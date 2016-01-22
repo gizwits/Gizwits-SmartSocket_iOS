@@ -29,6 +29,7 @@
 #import "IoTAbout.h"
 #import "IoTMainController.h"
 #import "IoTPhotoRecorder.h"
+#import "IoTVersion.h"
 
 #import "SlideNavigationController.h"
 
@@ -47,7 +48,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    subItems = @[@"设备管理", @"账号管理", @"帮助", @"关于"];
+    subItems = @[@"设备管理", @"账号管理", @"帮助", @"关于", @"版本信息"];
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -201,6 +202,14 @@
         cell.textLabel.text = subItems[indexPath.row-deviceCount];
     }
     
+    //版本信息
+    if(indexPath.row == deviceCount+4)
+    {
+        cell.imageView.image = [UIImage imageNamed:@"menu_icon-17"];
+        cell.textLabel.text = subItems[indexPath.row-deviceCount];
+    }
+    
+    
     //在这里，加'>'符号
     if(indexPath.row > deviceCount)
     {
@@ -269,6 +278,12 @@
         //关于
         IoTAbout *aboutCtrl = [[IoTAbout alloc] init];
         [self pushToViewController:aboutCtrl];
+    }
+    if(indexPath.row == deviceCount+4)
+    {
+        //版本信息
+        IoTVersion *versionCtrl = [[IoTVersion alloc] init];
+        [self pushToViewController:versionCtrl];
     }
 }
 
