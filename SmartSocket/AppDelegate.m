@@ -28,8 +28,8 @@
 #import "IoTPhotoRecorder.h"
 
 // App ID 和 Product Key
-static NSString * const IOT_APPKEY = @"1efb69ea6ae349edb6224d915750731e";
-NSString * const IOT_PRODUCT       = @"1d9a35123eaf4fe0bb6e1a1d8cd7cb52";
+static NSString * const IOT_APPKEY = @"your_app_id";
+NSString * const IOT_PRODUCT       = @"your_product_key";
 
 @interface AppDelegate ()
 {
@@ -48,7 +48,7 @@ NSString * const IOT_PRODUCT       = @"1d9a35123eaf4fe0bb6e1a1d8cd7cb52";
     NSData *data = [NSData dataWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"data" ofType:@"json"]];
 //    NSString *result = [[NSString alloc] initWithData:data  encoding:NSUTF8StringEncoding];
 //    NSLog(@"%@", result);
-    model = [IoTProcessModel startWithAppID:IOT_APPKEY appSecret:@"5ac622f6b1524c1abfa879dbf7e82ace" product:IOT_PRODUCT productJson:data];
+    model = [IoTProcessModel startWithAppID:IOT_APPKEY appSecret:@"your_app_secret" product:IOT_PRODUCT productJson:data];
     model.delegate = self;
     
     //用户未注册-->登录
