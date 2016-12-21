@@ -1,5 +1,31 @@
-# Gizwits-SmartSocket_iOS
+# 智能云智能插座
 ==================
+
+    此公版开源App已不再维护，机智云推出了物联开源框架，并提供了其他开源案例供参考。机智云公版开源App项目地址：
+    
+    机智云物联开源框架iOS项目 https://github.com/gizwits/GizOpenSource_AppKit_iOS
+    机智云智能灯2代iOS项目 https://github.com/gizwits/Gizwits-SmartBuld_iOS
+    机智云Gokit的iOS项目 https://github.com/gizwits/gokit-ios
+    机智云Gokit的APICloud项目 https://github.com/gizwits/gokit_demo_in_apicloud
+    
+    我们在机智云社区、QQ群提供技术支持，意见反馈渠道。机智云社区网址：http://club.gizwits.com/forum.php
+
+    QQ群：
+    G1机智云物联网云服务 104975951
+    G2机智云物联网云服务 491509598
+    G3机智云物联网云服务 287087942
+
+    意见反馈：http://form.mikecrm.com/s1ZJxj
+
+Gizwits Smart-socket iOS App
+
+    这是一款使用XPGWifiSDK的开源代码示例APP，可以帮助开发者快速入手，使用XPGWifiSDK开发连接机智云的物联APP。
+
+XPGWifiSDK 版本号
+
+    1.6.1.15123015
+
+使用说明
 
     使用机智云开源APP之前，需要先在机智云开发平台创建您自己的产品和应用。
 
@@ -9,13 +35,6 @@
 
     上述信息申请好之后，在代码中请找到"your_app_id"、"your_app_secret"、"your_product_key"字符串做相应的替换。
 
-Gizwits Smart-socket Demo App
-
-    这是一款使用XPGWifiSDK的开源代码示例APP，可以帮助开发者快速入手，使用XPGWifiSDK开发连接机智云的物联APP。
-
-XPGWifiSDK 版本号
-
-    1.6.1.15123015
 
 功能介绍
 
@@ -57,4 +76,4 @@ XPGWifiSDK 版本号
 问题反馈
 
     您可以给机智云的技术支持人员发送邮件，反馈您在使用过程中遇到的任何问题。
-    邮箱：janel@gizwits.com
+    邮箱：club@gizwits.com
